@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@three-ws/spatial-mcp: Validator, builder, and conformance fixtures for Spatial MCP</title>
+<meta name="description" content="Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.">
+<link rel="canonical" href="https://nirholas.github.io/spatial-mcp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="three.ws">
+<meta property="og:title" content="@three-ws/spatial-mcp">
+<meta property="og:description" content="Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.">
+<meta property="og:url" content="https://nirholas.github.io/spatial-mcp/">
+<meta property="og:image" content="https://nirholas.github.io/spatial-mcp/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="@three-ws/spatial-mcp">
+<meta name="twitter:description" content="Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.">
+<meta name="twitter:image" content="https://nirholas.github.io/spatial-mcp/og.png">
+<meta name="keywords" content="mcp, model-context-protocol, 3d, glb, gltf, spatial, tool-result, structured-content, validator, three.ws, ai-agents">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<link rel="icon" href="https://three.ws/three-ws-mcp-icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"@three-ws/spatial-mcp","description":"Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.","codeRepository":"https://github.com/nirholas/spatial-mcp","programmingLanguage":"JavaScript","license":"https://spdx.org/licenses/CC0-1.0.html","version":"0.1.0","url":"https://nirholas.github.io/spatial-mcp/","author":{"@type":"Organization","name":"three.ws","url":"https://three.ws"},"keywords":"mcp, model-context-protocol, 3d, glb, gltf, spatial, tool-result, structured-content, validator, three.ws, ai-agents"}</script>
+<style>:root{--bg:#fff;--fg:#111418;--mut:#586069;--line:#e3e6ea;--acc:#2563eb;--code:#f4f6f8;--card:#fafbfc}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0d10;--fg:#e8eaed;--mut:#9aa3ad;--line:#232830;--acc:#6ea0ff;--code:#14181d;--card:#10141a}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc)}a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
+header.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:700;text-decoration:none;color:var(--fg)}
+.bar nav{margin-left:auto;display:flex;gap:16px;font-size:14px}
+.bar nav a{color:var(--mut);text-decoration:none;transition:color .15s}.bar nav a:hover{color:var(--fg)}
+.hero{max-width:1100px;margin:0 auto;padding:48px 16px 24px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}
+.hero p{color:var(--mut);max-width:70ch;font-size:18px;margin:0 0 24px}
+.install{display:flex;align-items:center;gap:8px;max-width:620px;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:6px 6px 6px 14px}
+.install code{flex:1;overflow-x:auto;white-space:nowrap;font:14px ui-monospace,SFMono-Regular,Menlo,monospace}
+.install button{border:0;background:var(--acc);color:#fff;border-radius:7px;padding:8px 14px;font:600 13px system-ui;cursor:pointer;transition:transform .12s,opacity .12s}
+.install button:hover{opacity:.9}.install button:active{transform:scale(.96)}
+.cta{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.cta a{padding:9px 16px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;color:var(--fg);transition:border-color .15s,transform .15s}
+.cta a:hover{border-color:var(--acc);transform:translateY(-1px)}.cta a.pri{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.layout{max-width:1100px;margin:0 auto;padding:8px 16px 64px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:40px}
+@media(max-width:860px){.layout{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
+.toc{position:sticky;top:76px;align-self:start;font-size:14px;border-left:1px solid var(--line);padding-left:16px}
+.toc p{margin:0 0 8px;font-weight:700;color:var(--mut);text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+.toc ul{list-style:none;margin:0;padding:0}.toc li{margin:6px 0}.toc a{color:var(--mut);text-decoration:none}.toc a:hover{color:var(--fg)}
+main{min-width:0;overflow-wrap:anywhere}main pre code{overflow-wrap:normal}main img{max-width:100%;height:auto}
+main h2{margin-top:2.2em;padding-bottom:.3em;border-bottom:1px solid var(--line)}
+.anchor{margin-left:-1.1em;padding-right:.4em;text-decoration:none;opacity:0;color:var(--mut)}h2:hover .anchor,h3:hover .anchor,h4:hover .anchor{opacity:1}
+pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.5}
+code{font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code);padding:.15em .35em;border-radius:5px}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}th,td{border:1px solid var(--line);padding:8px 12px;text-align:left}th{background:var(--card)}
+blockquote{margin:1em 0;padding:.2em 1em;border-left:4px solid var(--line);color:var(--mut)}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+.foot-in{max-width:1100px;margin:0 auto;padding:24px 16px;display:flex;gap:16px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+<a class="brand" href="https://nirholas.github.io/spatial-mcp/">@three-ws/spatial-mcp</a>
+<nav aria-label="Project links"><a href="https://github.com/nirholas/spatial-mcp">GitHub</a><a href="https://www.npmjs.com/package/@three-ws/spatial-mcp">npm</a><a href="llms.txt">llms.txt</a><a href="https://three.ws">three.ws</a></nav>
+</div></header>
+<section class="hero">
+<h1>@three-ws/spatial-mcp</h1>
+<p>Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.</p>
+<div class="install" role="group" aria-label="Install command"><code>npm install @three-ws/spatial-mcp</code><button type="button" data-copy="npm install @three-ws/spatial-mcp">Copy</button></div>
+<div class="cta"><a class="pri" href="https://github.com/nirholas/spatial-mcp">View on GitHub</a><a href="https://github.com/nirholas/spatial-mcp/stargazers">Star the repo</a></div>
+</section>
+<div class="layout">
+<main id="content"><h1>@three-ws/spatial-mcp</h1>
+<p>Validator, builder, and conformance fixtures for <strong>Spatial MCP</strong>, the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result instead of a URL in text.</p>
+<ul>
+<li>Spec: <a href="https://github.com/nirholas/three.ws/blob/main/specs/SPATIAL_MCP.md"><code>specs/SPATIAL_MCP.md</code></a></li>
+<li>Live reference renderer + paste-in checker: <a href="https://three.ws/spatial-mcp">three.ws/spatial-mcp</a></li>
+<li>Same module, importable without npm: <code>https://three.ws/spatial-mcp/spatial-validator.js</code></li>
+</ul>
+<p>Dependency-free. Runs in Node 18+, any browser, and any bundler.</p>
+<h2 id="install"><a class="anchor" href="#install" aria-label="Link to this section">#</a>Install</h2>
+<pre><code class="language-bash">npm install @three-ws/spatial-mcp
+</code></pre>
+<h2 id="emit-a-conformant-artifact"><a class="anchor" href="#emit-a-conformant-artifact" aria-label="Link to this section">#</a>Emit a conformant artifact</h2>
+<p>Put the artifact in your MCP tool result&#39;s <code>structuredContent</code>. Only <code>spatialMcpVersion</code>, <code>kind</code>, and <code>scene.glbUrl</code> are required; <code>buildSpatialArtifact</code> fills the recommended blocks and omits anything you don&#39;t provide.</p>
+<pre><code class="language-js">import { buildSpatialArtifact } from &#39;@three-ws/spatial-mcp&#39;;
+
+const spatial = buildSpatialArtifact({
+	glbUrl: &#39;https://three.ws/avatars/xbot.glb&#39;,
+	kind: &#39;rigged-model&#39;,
+	prompt: &#39;a sci-fi robot&#39;,
+	title: &#39;Sci-fi robot&#39;,
+});
+
+return {
+	content: [{ type: &#39;text&#39;, text: &#39;Here is your 3D model.&#39; }],
+	structuredContent: { glbUrl: spatial.scene.glbUrl, spatial },
+};
+</code></pre>
+<h2 id="validate-before-you-ship"><a class="anchor" href="#validate-before-you-ship" aria-label="Link to this section">#</a>Validate before you ship</h2>
+<p><code>validateSpatialArtifact</code> returns actionable diagnostics, never a bare boolean: every problem names the offending <code>path</code> and how to fix it.</p>
+<pre><code class="language-js">import { validateSpatialArtifact } from &#39;@three-ws/spatial-mcp&#39;;
+
+const { valid, errors, warnings } = validateSpatialArtifact(spatial);
+// errors:   [{ path: &#39;scene.glbUrl&#39;, message: &#39;required — must be an https URL to a .glb asset&#39; }]
+// warnings: [{ path: &#39;camera&#39;, message: &#39;recommended — include `{ autoRotate: true }` …&#39; }]
+</code></pre>
+<h2 id="data-minimization-lint"><a class="anchor" href="#data-minimization-lint" aria-label="Link to this section">#</a>Data-minimization lint</h2>
+<p>The spec requires emitters to strip internal identifiers, wallet addresses, prices, and auth material from the artifact; that is what keeps the shape safe in crypto-free app stores. <code>lintSpatialMeta</code> flags the common violations. Findings are advisory and never affect validity.</p>
+<pre><code class="language-js">import { lintSpatialMeta } from &#39;@three-ws/spatial-mcp&#39;;
+
+lintSpatialMeta(artifact);
+// [{ path: &#39;meta.session_id&#39;, message: &#39;looks like an internal/auth/coin field — …&#39; }]
+</code></pre>
+<h2 id="conformance-fixtures"><a class="anchor" href="#conformance-fixtures" aria-label="Link to this section">#</a>Conformance fixtures</h2>
+<p><code>fixtures/</code> is the spec&#39;s test corpus: real artifacts a conformant validator must accept, reject, or lint, with the required verdicts in <code>fixtures/manifest.json</code>. Point your own implementation at it:</p>
+<pre><code class="language-js">import manifest from &#39;@three-ws/spatial-mcp/fixtures/manifest&#39; with { type: &#39;json&#39; };
+
+for (const { file, valid, mustFlag = [] } of manifest.fixtures) {
+	const artifact = await loadFixture(file); // read from node_modules/@three-ws/spatial-mcp/fixtures/&lt;file&gt;
+	const result = myValidator(artifact);
+	assert.equal(result.valid, valid, file);
+	for (const path of mustFlag) assert(result.errors.some((e) =&gt; e.path === path), `${file} must flag ${path}`);
+}
+</code></pre>
+<p>If your validator disagrees with a required verdict or misses a <code>mustFlag</code> path, it is not conformant. Fixture asset URLs use the reserved <code>assets.example</code> host: they exercise the validator and are not fetchable.</p>
+<h2 id="api"><a class="anchor" href="#api" aria-label="Link to this section">#</a>API</h2>
+<table>
+<thead>
+<tr>
+<th>Export</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SPATIAL_MCP_VERSION</code></td>
+<td>the shape version this module implements (<code>&#39;0.1&#39;</code>)</td>
+</tr>
+<tr>
+<td><code>buildSpatialArtifact(fields)</code></td>
+<td>assemble a conformant artifact from what a generation tool already has</td>
+</tr>
+<tr>
+<td><code>validateSpatialArtifact(payload)</code></td>
+<td><code>{ valid, version, errors, warnings }</code> with per-path diagnostics</td>
+</tr>
+<tr>
+<td><code>isConformantSpatialArtifact(payload)</code></td>
+<td>boolean convenience over the validator</td>
+</tr>
+<tr>
+<td><code>lintSpatialMeta(payload)</code></td>
+<td>advisory data-minimization findings, <code>[{ path, message }]</code></td>
+</tr>
+</tbody></table>
+<h2 id="rendering"><a class="anchor" href="#rendering" aria-label="Link to this section">#</a>Rendering</h2>
+<p>This package is emit-and-validate only. The framework-free reference renderer lives at <a href="https://github.com/nirholas/three.ws/blob/main/public/spatial-mcp/spatial-renderer.js"><code>public/spatial-mcp/spatial-renderer.js</code></a> (importable at <code>https://three.ws/spatial-mcp/spatial-renderer.js</code>) and displays any conformant artifact, including one transformed from a foreign tool result.</p>
+<h2 id="license"><a class="anchor" href="#license" aria-label="Link to this section">#</a>License</h2>
+<p>CC0-1.0 (<a href="https://github.com/nirholas/spatial-mcp/blob/main/LICENSE">LICENSE</a>). The spec and this implementation are public domain: reimplement, extend, and ship them anywhere.</p>
+</main>
+<nav class="toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#install">Install</a></li><li><a href="#emit-a-conformant-artifact">Emit a conformant artifact</a></li><li><a href="#validate-before-you-ship">Validate before you ship</a></li><li><a href="#data-minimization-lint">Data-minimization lint</a></li><li><a href="#conformance-fixtures">Conformance fixtures</a></li><li><a href="#api">API</a></li><li><a href="#rendering">Rendering</a></li><li><a href="#license">License</a></li></ul></nav>
+</div>
+<footer><div class="foot-in"><span>CC0-1.0 licensed</span><a href="https://github.com/nirholas/spatial-mcp/issues">Issues</a><a href="https://github.com/nirholas/spatial-mcp/blob/main/CONTRIBUTING.md">Contributing</a><a href="https://github.com/nirholas/spatial-mcp/security/policy">Security</a><a href="https://three.ws">Part of three.ws</a></div></footer>
+<script>document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+var t=b.getAttribute('data-copy');var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1400)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){})}
+else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()}})});</script>
+</body>
+</html>

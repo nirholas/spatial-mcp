@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "@three-ws/spatial-mcp"
+abstract: "Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result."
+version: 0.1.0
+license: CC0-1.0
+repository-code: "https://github.com/nirholas/spatial-mcp"
+url: "https://three.ws"
+authors:
+  - name: three.ws
+    website: "https://three.ws"

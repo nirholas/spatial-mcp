@@ -1,0 +1,19 @@
+# @three-ws/spatial-mcp
+
+> Validator, builder, and conformance fixtures for Spatial MCP — the open (CC0) shape for returning a live, interactive 3D scene as a first-class MCP tool result.
+
+@three-ws/spatial-mcp is a JavaScript library from three.ws. Install: `npm install @three-ws/spatial-mcp`.
+
+## Docs
+
+- [README](https://github.com/nirholas/spatial-mcp/blob/main/README.md): install, configuration, full reference
+- [Documentation site](https://nirholas.github.io/spatial-mcp/): the README as a web page
+- [Full text for LLMs](https://nirholas.github.io/spatial-mcp/llms-full.txt): README inlined
+- [AGENTS.md](https://github.com/nirholas/spatial-mcp/blob/main/AGENTS.md): guidance for coding agents
+
+## Project
+
+- [Source](https://github.com/nirholas/spatial-mcp)
+- [npm](https://www.npmjs.com/package/@three-ws/spatial-mcp)
+- [three.ws](https://three.ws): the platform this is part of
+- [Issues](https://github.com/nirholas/spatial-mcp/issues)
