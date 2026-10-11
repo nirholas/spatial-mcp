@@ -1,7 +1,7 @@
 # @three-ws/spatial-mcp
 
 <!-- three.ws:badges -->
-[![GitHub stars](https://img.shields.io/github/stars/nirholas/spatial-mcp?style=flat&logo=github)](https://github.com/nirholas/spatial-mcp/stargazers) [![License](https://img.shields.io/github/license/nirholas/spatial-mcp?style=flat)](https://github.com/nirholas/spatial-mcp/blob/HEAD/LICENSE) [![Last commit](https://img.shields.io/github/last-commit/nirholas/spatial-mcp?style=flat)](https://github.com/nirholas/spatial-mcp/commits) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat)](https://github.com/nirholas/spatial-mcp/pulls) [![AI agent friendly](https://img.shields.io/badge/AI%20agents-AGENTS.md%20%2B%20llms.txt-6d5dfc?style=flat)](https://github.com/nirholas/spatial-mcp/blob/HEAD/AGENTS.md)
+[![GitHub stars](https://img.shields.io/github/stars/nirholas/spatial-mcp?style=flat&logo=github)](https://github.com/nirholas/spatial-mcp/stargazers) [![Last commit](https://img.shields.io/github/last-commit/nirholas/spatial-mcp?style=flat)](https://github.com/nirholas/spatial-mcp/commits) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat)](https://github.com/nirholas/spatial-mcp/pulls) [![AI agent friendly](https://img.shields.io/badge/AI%20agents-AGENTS.md%20%2B%20llms.txt-6d5dfc?style=flat)](https://github.com/nirholas/spatial-mcp/blob/HEAD/AGENTS.md)
 <!-- /three.ws:badges -->
 
 
